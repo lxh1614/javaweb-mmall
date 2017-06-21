@@ -25,4 +25,10 @@ public interface UserMapper {
     String seletctQuestionByUsername(String username);
 
     int checkAnswer(@Param("username") String username,@Param("question") String question,@Param("answer") String answer);
+
+    int updatePasswordByUserName(@Param("username") String username,@Param("passwordNew") String passwordNew);
+
+    int  checkPassword(@Param("password") String password,@Param("userid") Integer userId);
+
+    int  checkEmailByUserId(@Param("email") String email,@Param("userid") Integer userId);
 }
